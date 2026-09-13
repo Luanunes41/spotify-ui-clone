@@ -1,0 +1,152 @@
+@font-face {
+    font-family: 'Circular Std Black';
+    src: url('../fonts/CircularStd-Black.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Circular Std Bold';
+    src: url('../fonts/CircularStd-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Circular Std Book';
+    src: url('../fonts/CircularStd-Book.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Circular Std Medium';
+    src: url('../fonts/CircularStd-Medium.ttf') format('truetype');
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+body {
+    display: flex;
+}
+
+.container--left,
+.container--right {
+    flex-shrink: 0;
+    width: 280px;
+}
+
+.container--left,
+.container--center,
+.container--right {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin: 15px;
+    height: calc(100vh - 30px);
+    box-sizing: border-box;
+    padding: 16px;
+    overflow-y: auto;
+}
+
+.container--center {
+    flex: 1;
+    min-width: 0;
+}
+
+.menu--principal,
+.menu--secundario {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.menu--item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+}
+
+.menu--item--texto {
+    font-size: 20px;
+    font-family: 'Circular Std Bold';
+}
+
+.icon--create {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background-color: #282828;
+}
+
+.icon--create img {
+    width: 18px;
+    height: 18px;
+}
+
+.linha--separadora {
+    border: none;
+    border-top: 1px solid #282828;
+    margin: 0;
+}
+
+.menu--playlists {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 20px;
+}
+
+.playlist--item {
+    font-size: 16px;
+    font-family: 'Circular Std Book';
+    cursor: pointer;
+}
+
+.logo {
+    width: 40px;
+}
+
+.texto--cinza {
+    color: #B3B3B3;
+}
+
+.texto--branco {
+    color: #FFFFFF;
+}
+
+.fundo--preto {
+    background-color: black;
+}
+
+.fundo--degrade {
+    background: linear-gradient(180deg, #3333A3 0%, #121212 100%);
+}
+
+.componente--see--all {
+    color: #adadad;
+    font-size: 16px;
+    font-family: 'Circular Std Bold';
+}
+
+.icon--menu {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.friend-activity--header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.friend-activity--header span {
+    margin-right: auto;
+    font-size: 20px;
+    font-family: 'Circular Std Bold';
+    color: #FFFFFF;
+}
+
