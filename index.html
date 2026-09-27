@@ -5,70 +5,223 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify-Clone</title>
     <link rel="stylesheet" href="src/assets/css/style.css">
+    <link rel="stylesheet" href="src/assets/css/responsividade.css">
 </head>
 <body>
 
-    <div class="container--left fundo--preto">
-        <div class="container--left--header">
-            <img src="src/assets/img/spotify.png" alt="Spotify Logo" class="logo">
-        </div>
-
+    <!-- Barra lateral esquerda -->
+    <aside class="container--left">
         <nav class="menu--principal">
-            <div class="menu--item">
-                <img src="src/assets/icons/home.svg" class="icon--menu" alt="Home">
-                <span class="texto--branco menu--item--texto">Home</span>
-            </div>
-            <div class="menu--item">
-                <img src="src/assets/icons/search.svg" class="icon--menu" alt="Search">
-                <span class="texto--cinza menu--item--texto">Search</span>
-            </div>
-            <div class="menu--item">
-                <img src="src/assets/icons/library.svg" class="icon--menu" alt="Your Library">
-                <span class="texto--cinza menu--item--texto">Your Library</span>
-            </div>
+            <a href="#" class="menu--item texto--branco">
+                <span class="menu--icone"><img src="src/assets/icons/menu/home.svg" alt=""></span>
+                Home
+            </a>
+            <a href="#" class="menu--item texto--cinza">
+                <span class="menu--icone"><img src="src/assets/icons/menu/search.svg" alt=""></span>
+                Search
+            </a>
+            <a href="#" class="menu--item texto--cinza">
+                <span class="menu--icone"><img src="src/assets/icons/menu/library.svg" alt=""></span>
+                Your Library
+            </a>
         </nav>
 
-        <div class="menu--secundario">
-            <div class="menu--item">
-                <div class="icon--create">
-                    <img src="src/assets/icons/create.svg" alt="Create Playlist">
-                </div>
-                <span class="texto--cinza menu--item--texto">Create Playlist</span>
-            </div>
-            <div class="menu--item">
-                <img src="src/assets/icons/liked.svg" class="icon--menu" alt="Liked Songs">
-                <span class="texto--branco menu--item--texto">Liked Songs</span>
-            </div>
-        </div>
+        <nav class="menu--secundario">
+            <a href="#" class="menu--item texto--cinza">
+                <span class="menu--icone"><img src="src/assets/icons/menu/create.svg" alt=""></span>
+                Create Playlist
+            </a>
+            <a href="#" class="menu--item texto--branco">
+                <span class="menu--icone"><img src="src/assets/icons/menu/liked.svg" alt=""></span>
+                Liked Songs
+            </a>
+        </nav>
 
         <hr class="linha--separadora">
 
-        <div class="menu--playlists">
-            <span class="texto--cinza playlist--item">Chill Mix</span>
-            <span class="texto--cinza playlist--item">Insta Hits</span>
-            <span class="texto--cinza playlist--item">Your Top Songs 2021</span>
-            <span class="texto--cinza playlist--item">Mellow Songs</span>
-            <span class="texto--cinza playlist--item">Anime Lofi &amp; Chillhop Music</span>
-            <span class="texto--cinza playlist--item">BG Afro &quot;Select&quot; Vibes</span>
-            <span class="texto--cinza playlist--item">Afro &quot;Select&quot; Vibes</span>
-            <span class="texto--cinza playlist--item">Happy Hits!</span>
-            <span class="texto--cinza playlist--item">Deep Focus</span>
-            <span class="texto--cinza playlist--item">Instrumental Study</span>
-            <span class="texto--cinza playlist--item">OST Compilations</span>
-            <span class="texto--cinza playlist--item">Nostalgia for old souled mill...</span>
-            <span class="texto--cinza playlist--item">Mixed Feelings</span>
+        <ul class="menu--playlists">
+            <li><a href="#">Chill Mix</a></li>
+            <li><a href="#">Insta Hits</a></li>
+            <li><a href="#">Your Top Songs 2021</a></li>
+            <li><a href="#">Mellow Songs</a></li>
+            <li><a href="#">Anime Lofi &amp; Chillhop Music</a></li>
+            <li><a href="#">BG Afro &ldquo;Select&rdquo; Vibes</a></li>
+            <li><a href="#">Afro &ldquo;Select&rdquo; Vibes</a></li>
+            <li><a href="#">Happy Hits!</a></li>
+            <li><a href="#">Deep Focus</a></li>
+            <li><a href="#">Instrumental Study</a></li>
+            <li><a href="#">OST Compilations</a></li>
+            <li><a href="#">Nostalgia for old souled millennials</a></li>
+            <li><a href="#">Mixed Feelings</a></li>
+        </ul>
+
+        <div class="capa--tocando">
+            <img src="src/assets/img/covers/play-it-safe.jpg" alt="Capa do álbum Play It Safe">
+            <span class="album--artista">JULIA WOLF</span>
+            <span class="album--titulo">PLAY <small>IT</small> SAFE</span>
+            <button class="album--recolher" aria-label="Recolher capa"><img src="src/assets/icons/navegacao/chevron-down.svg" alt=""></button>
         </div>
-    </div>
+    </aside>
 
-    <div class="container--center fundo--degrade">
-    </div>
+    <!-- Conteúdo central -->
+    <main class="container--center">
+        <div class="conteudo">
+            <header class="topo">
+                <div class="topo--navegacao">
+                    <button class="botao--circular" aria-label="Voltar"><img src="src/assets/icons/navegacao/chevron-left.svg" alt=""></button>
+                    <button class="botao--circular" aria-label="Avançar"><img src="src/assets/icons/navegacao/chevron-right.svg" alt=""></button>
+                </div>
+                <button class="usuario">
+                    <img src="src/assets/img/covers/avatar.jpg" alt="" class="usuario--avatar">
+                    <span>davedirect3</span>
+                    <img src="src/assets/icons/navegacao/caret-down.svg" alt="" class="usuario--seta">
+                </button>
+            </header>
 
-    <div class="container--right fundo--preto">
+            <h1 class="saudacao">Good afternoon</h1>
+
+            <div class="atalhos">
+                <a href="#" class="atalho"><div class="capa capa--mix" style="--cor: #F2DC3C"><img src="src/assets/img/covers/chill-mix.jpg" alt=""><span class="capa--logo"></span><span class="capa--nome">Chill Mix</span></div>Chill Mix</a>
+                <a href="#" class="atalho"><div class="capa capa--mix" style="--cor: #D03FA6"><img src="src/assets/img/covers/pop-mix.jpg" alt=""><span class="capa--logo"></span><span class="capa--nome">Pop Mix</span></div>Pop Mix</a>
+                <a href="#" class="atalho"><div class="capa capa--daily" style="--cor: #9CE0D2"><img src="src/assets/img/covers/daily-mix-1.jpg" alt=""><span class="capa--logo"></span><span class="capa--nome">Daily Mix 1</span></div>Daily Mix 1</a>
+                <a href="#" class="atalho"><div class="capa capa--daily" style="--cor: #F2C87A"><img src="src/assets/img/covers/daily-mix-5.jpg" alt=""><span class="capa--logo"></span><span class="capa--nome">Daily Mix 5</span></div>Daily Mix 5</a>
+                <a href="#" class="atalho"><div class="capa capa--mix" style="--cor: #C63F8F"><img src="src/assets/img/covers/folk-acoustic-mix.jpg" alt=""><span class="capa--logo"></span><span class="capa--nome">Folk &amp; Acoustic Mix</span></div>Folk &amp; Acoustic Mix</a>
+                <a href="#" class="atalho"><div class="capa capa--daily" style="--cor: #E3849F"><img src="src/assets/img/covers/daily-mix-4.jpg" alt=""><span class="capa--logo"></span><span class="capa--nome">Daily Mix 4</span></div>Daily Mix 4</a>
+            </div>
+
+            <section class="secao">
+                <div class="secao--cabecalho">
+                    <h2>Your top mixes</h2>
+                    <a href="#" class="componente--see--all">SEE ALL</a>
+                </div>
+                <div class="cards">
+                    <a href="#" class="card"><div class="capa capa--mix" style="--cor: #F2DC3C"><img src="src/assets/img/covers/chill-mix.jpg" alt=""><span class="capa--logo"></span><span class="capa--nome">Chill Mix</span></div><h3>Chill Mix</h3><p>Julia Wolf, Khalid, ayokay and more</p></a>
+                    <a href="#" class="card"><div class="capa capa--mix" style="--cor: #D03FA6"><img src="src/assets/img/covers/pop-mix.jpg" alt=""><span class="capa--logo"></span><span class="capa--nome">Pop Mix</span></div><h3>Pop Mix</h3><p>Hey Violet, VÉRITÉ, Timeflies and more</p></a>
+                    <a href="#" class="card"><div class="capa capa--mix" style="--cor: #69DA92"><img src="src/assets/img/covers/pheelz-mix.jpg" alt=""><span class="capa--logo"></span><span class="capa--nome">Pheelz Mix</span></div><h3>Pheelz Mix</h3><p>WizKid, Asake, Tiwa Savage and more</p></a>
+                    <a href="#" class="card"><div class="capa capa--mix" style="--cor: #E4472F"><img src="src/assets/img/covers/indie-mix.jpg" alt=""><span class="capa--logo"></span><span class="capa--nome">Indie Mix</span></div><h3>Indie Mix</h3><p>Joywave, The xx, The Neighbourhood and more</p></a>
+                </div>
+            </section>
+
+            <section class="secao">
+                <div class="secao--cabecalho">
+                    <h2>Made for you</h2>
+                    <a href="#" class="componente--see--all">SEE ALL</a>
+                </div>
+                <div class="cards">
+                    <a href="#" class="card"><div class="capa capa--mix" style="--cor: #C63F8F"><img src="src/assets/img/covers/folk-acoustic-mix.jpg" alt=""><span class="capa--logo"></span><span class="capa--nome">Folk &amp; Acoustic Mix</span></div><h3>Folk &amp; Acoustic Mix</h3><p>Canyon City, Crooked Still, Gregory Alan Isakov and more</p></a>
+                    <a href="#" class="card"><div class="capa capa--daily" style="--cor: #9CE0D2"><img src="src/assets/img/covers/daily-mix-1.jpg" alt=""><span class="capa--logo"></span><span class="capa--nome">Daily Mix 1</span></div><h3>Daily Mix 1</h3><p>Ayra Starr, Lil Kesh, Ed Sheeran and more</p></a>
+                    <a href="#" class="card"><div class="capa capa--daily" style="--cor: #F2C87A"><img src="src/assets/img/covers/daily-mix-5.jpg" alt=""><span class="capa--logo"></span><span class="capa--nome">Daily Mix 5</span></div><h3>Daily Mix 5</h3><p>FRENSHIP, Brooke Sierra, Julia Wolf and more</p></a>
+                    <a href="#" class="card"><div class="capa capa--mix" style="--cor: #D03FA6"><img src="src/assets/img/covers/pop-mix.jpg" alt=""><span class="capa--logo"></span><span class="capa--nome">Pop Mix</span></div><h3>Pop Mix</h3><p>Hey Violet, VÉRITÉ, Timeflies and more</p></a>
+                </div>
+            </section>
+
+            <section class="secao">
+                <div class="secao--cabecalho">
+                    <h2>Recently played</h2>
+                    <a href="#" class="componente--see--all">SEE ALL</a>
+                </div>
+                <div class="cards">
+                    <a href="#" class="card"><div class="capa capa--mix" style="--cor: #F2DC3C"><img src="src/assets/img/covers/chill-mix.jpg" alt=""><span class="capa--logo"></span><span class="capa--nome">Chill Mix</span></div><h3>Chill Mix</h3><p>Julia Wolf, Khalid, ayokay and more</p></a>
+                    <a href="#" class="card"><div class="capa capa--mix" style="--cor: #D03FA6"><img src="src/assets/img/covers/pop-mix.jpg" alt=""><span class="capa--logo"></span><span class="capa--nome">Pop Mix</span></div><h3>Pop Mix</h3><p>Hey Violet, VÉRITÉ, Timeflies and more</p></a>
+                    <a href="#" class="card"><div class="capa capa--mix" style="--cor: #69DA92"><img src="src/assets/img/covers/pheelz-mix.jpg" alt=""><span class="capa--logo"></span><span class="capa--nome">Pheelz Mix</span></div><h3>Pheelz Mix</h3><p>WizKid, Asake, Tiwa Savage and more</p></a>
+                    <a href="#" class="card"><div class="capa capa--mix" style="--cor: #E4472F"><img src="src/assets/img/covers/indie-mix.jpg" alt=""><span class="capa--logo"></span><span class="capa--nome">Indie Mix</span></div><h3>Indie Mix</h3><p>Joywave, The xx, The Neighbourhood and more</p></a>
+                </div>
+            </section>
+
+            <section class="secao">
+                <div class="secao--cabecalho">
+                    <h2>Jump back in</h2>
+                    <a href="#" class="componente--see--all">SEE ALL</a>
+                </div>
+                <div class="cards">
+                    <a href="#" class="card"><div class="capa capa--mix" style="--cor: #C63F8F"><img src="src/assets/img/covers/folk-acoustic-mix.jpg" alt=""><span class="capa--logo"></span><span class="capa--nome">Folk &amp; Acoustic Mix</span></div><h3>Folk &amp; Acoustic Mix</h3><p>Canyon City, Crooked Still, Gregory Alan Isakov and more</p></a>
+                    <a href="#" class="card"><div class="capa capa--daily" style="--cor: #9CE0D2"><img src="src/assets/img/covers/daily-mix-1.jpg" alt=""><span class="capa--logo"></span><span class="capa--nome">Daily Mix 1</span></div><h3>Daily Mix 1</h3><p>Ayra Starr, Lil Kesh, Ed Sheeran and more</p></a>
+                    <a href="#" class="card"><div class="capa capa--daily" style="--cor: #F2C87A"><img src="src/assets/img/covers/daily-mix-5.jpg" alt=""><span class="capa--logo"></span><span class="capa--nome">Daily Mix 5</span></div><h3>Daily Mix 5</h3><p>FRENSHIP, Brooke Sierra, Julia Wolf and more</p></a>
+                    <a href="#" class="card"><div class="capa capa--mix" style="--cor: #D03FA6"><img src="src/assets/img/covers/pop-mix.jpg" alt=""><span class="capa--logo"></span><span class="capa--nome">Pop Mix</span></div><h3>Pop Mix</h3><p>Hey Violet, VÉRITÉ, Timeflies and more</p></a>
+                </div>
+            </section>
+
+            <section class="secao">
+                <div class="secao--cabecalho">
+                    <h2>Uniquely yours</h2>
+                    <a href="#" class="componente--see--all">SEE ALL</a>
+                </div>
+                <div class="cards">
+                    <a href="#" class="card"><div class="capa capa--mix" style="--cor: #F2DC3C"><img src="src/assets/img/covers/chill-mix.jpg" alt=""><span class="capa--logo"></span><span class="capa--nome">Chill Mix</span></div><h3>Chill Mix</h3><p>Julia Wolf, Khalid, ayokay and more</p></a>
+                    <a href="#" class="card"><div class="capa capa--mix" style="--cor: #D03FA6"><img src="src/assets/img/covers/pop-mix.jpg" alt=""><span class="capa--logo"></span><span class="capa--nome">Pop Mix</span></div><h3>Pop Mix</h3><p>Hey Violet, VÉRITÉ, Timeflies and more</p></a>
+                    <a href="#" class="card"><div class="capa capa--mix" style="--cor: #69DA92"><img src="src/assets/img/covers/pheelz-mix.jpg" alt=""><span class="capa--logo"></span><span class="capa--nome">Pheelz Mix</span></div><h3>Pheelz Mix</h3><p>WizKid, Asake, Tiwa Savage and more</p></a>
+                    <a href="#" class="card"><div class="capa capa--mix" style="--cor: #E4472F"><img src="src/assets/img/covers/indie-mix.jpg" alt=""><span class="capa--logo"></span><span class="capa--nome">Indie Mix</span></div><h3>Indie Mix</h3><p>Joywave, The xx, The Neighbourhood and more</p></a>
+                </div>
+            </section>
+
+            <section class="secao">
+                <div class="secao--cabecalho">
+                    <h2>Just the hits</h2>
+                    <a href="#" class="componente--see--all">SEE ALL</a>
+                </div>
+                <div class="cards">
+                    <a href="#" class="card"><div class="capa capa--mix" style="--cor: #C63F8F"><img src="src/assets/img/covers/folk-acoustic-mix.jpg" alt=""><span class="capa--logo"></span><span class="capa--nome">Folk &amp; Acoustic Mix</span></div><h3>Folk &amp; Acoustic Mix</h3><p>Canyon City, Crooked Still, Gregory Alan Isakov and more</p></a>
+                    <a href="#" class="card"><div class="capa capa--daily" style="--cor: #9CE0D2"><img src="src/assets/img/covers/daily-mix-1.jpg" alt=""><span class="capa--logo"></span><span class="capa--nome">Daily Mix 1</span></div><h3>Daily Mix 1</h3><p>Ayra Starr, Lil Kesh, Ed Sheeran and more</p></a>
+                    <a href="#" class="card"><div class="capa capa--daily" style="--cor: #F2C87A"><img src="src/assets/img/covers/daily-mix-5.jpg" alt=""><span class="capa--logo"></span><span class="capa--nome">Daily Mix 5</span></div><h3>Daily Mix 5</h3><p>FRENSHIP, Brooke Sierra, Julia Wolf and more</p></a>
+                    <a href="#" class="card"><div class="capa capa--mix" style="--cor: #D03FA6"><img src="src/assets/img/covers/pop-mix.jpg" alt=""><span class="capa--logo"></span><span class="capa--nome">Pop Mix</span></div><h3>Pop Mix</h3><p>Hey Violet, VÉRITÉ, Timeflies and more</p></a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Barra lateral direita -->
+    <aside class="container--right">
         <div class="friend-activity--header">
             <span>Friend Activity</span>
-            <img src="src/assets/icons/add.svg" class="icon--menu" alt="Add">
-            <img src="src/assets/icons/close.svg" class="icon--menu" alt="Close">
-    </div>
-    </div>
+            <button class="friend-activity--botao" aria-label="Adicionar amigos"><img src="src/assets/icons/amigos/add.svg" alt="" class="icone--add"></button>
+            <button class="friend-activity--botao" aria-label="Fechar"><img src="src/assets/icons/amigos/close.svg" alt="" class="icone--close"></button>
+        </div>
+
+        <p class="friend-activity--texto">Let friends and followers on Spotify see what you&rsquo;re listening to.</p>
+
+        <ul class="amigos">
+            <li><img src="src/assets/icons/amigos/persona.svg" alt="" class="amigo--avatar"><img src="src/assets/icons/amigos/list.svg" alt="" class="amigo--linhas"></li>
+            <li><img src="src/assets/icons/amigos/persona.svg" alt="" class="amigo--avatar"><img src="src/assets/icons/amigos/list.svg" alt="" class="amigo--linhas"></li>
+            <li><img src="src/assets/icons/amigos/persona.svg" alt="" class="amigo--avatar"><img src="src/assets/icons/amigos/list.svg" alt="" class="amigo--linhas"></li>
+        </ul>
+
+        <p class="friend-activity--texto friend-activity--instrucao">Go to Settings &gt; Social and enable &ldquo;Share my listening activity on Spotify.&rsquo; You can turn this off at any time.</p>
+
+        <button class="botao--settings">SETTINGS</button>
+    </aside>
+
+    <!-- Player -->
+    <footer class="player">
+        <div class="player--musica">
+            <div>
+                <span class="player--titulo">Play It Safe</span>
+                <span class="player--artista">Julia Wolf</span>
+            </div>
+            <img src="src/assets/icons/player/heart.svg" alt="Curtida" class="player--curtir">
+        </div>
+
+        <div class="player--centro">
+            <div class="player--controles">
+                <button aria-label="Aleatório"><img src="src/assets/icons/player/shuffle.svg" alt=""></button>
+                <button aria-label="Anterior"><img src="src/assets/icons/player/previous.svg" alt=""></button>
+                <button aria-label="Pausar" class="player--pausar"><img src="src/assets/icons/player/pause.svg" alt=""></button>
+                <button aria-label="Próxima"><img src="src/assets/icons/player/next.svg" alt=""></button>
+                <button aria-label="Repetir"><img src="src/assets/icons/player/repeat.svg" alt=""></button>
+            </div>
+            <div class="player--progresso">
+                <span>2:39</span>
+                <div class="barra"><div class="barra--preenchida" style="width: 50%"></div></div>
+                <span>4:22</span>
+            </div>
+        </div>
+
+        <div class="player--extras">
+            <button aria-label="Fila"><img src="src/assets/icons/player/queue.svg" alt=""></button>
+            <button aria-label="Dispositivos"><img src="src/assets/icons/player/devices.svg" alt=""></button>
+            <button aria-label="Volume"><img src="src/assets/icons/player/volume.svg" alt=""></button>
+            <div class="barra barra--volume"><div class="barra--preenchida" style="width: 90%"></div></div>
+            <button aria-label="Tela cheia"><img src="src/assets/icons/player/fullscreen.svg" alt=""></button>
+        </div>
+    </footer>
 </body>
 </html>
