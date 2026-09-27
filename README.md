@@ -1,12 +1,16 @@
 # Spotify UI Clone
 
-Recriação da tela inicial do Spotify para desktop usando apenas **HTML e CSS** — sem frameworks, sem JavaScript e sem etapa de build.
+Recriação da tela inicial do Spotify para desktop usando **HTML, CSS e JavaScript puro** — sem frameworks ou etapa de build.
 
 ![Layout de referência](docs/referencia.png)
 
 ## Como abrir
 
 Não precisa instalar nada: basta abrir o arquivo `index.html` no navegador.
+
+## Integração contínua
+
+O GitHub Actions executa uma verificação de sintaxe do JavaScript a cada push para `main` e em pull requests direcionados a `main`. Também é possível iniciar a verificação manualmente pela aba **Actions** do GitHub. Esse CI valida o código, mas não publica o site.
 
 ## Estrutura
 

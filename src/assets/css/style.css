@@ -54,6 +54,12 @@ a {
     text-decoration: none;
 }
 
+:where(a, button):focus-visible {
+    outline: 2px solid #FFFFFF;
+    outline-offset: 3px;
+    border-radius: 3px;
+}
+
 button {
     padding: 0;
     border: none;
@@ -647,9 +653,31 @@ h1, h2, h3, p {
 }
 
 .player--curtir {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 20px;
     height: 20px;
     margin-top: 6px;
+}
+
+.capa--tocando.capa--recolhida {
+    height: 0;
+    aspect-ratio: auto;
+}
+
+.player--curtir img {
+    width: 18px;
+    height: 18px;
+}
+
+.player--curtir[aria-pressed="true"] img {
+    filter: invert(68%) sepia(78%) saturate(550%) hue-rotate(82deg) brightness(95%);
+}
+
+.player--controles button[aria-pressed="true"] {
+    opacity: 1;
+    filter: brightness(0) saturate(100%) invert(68%) sepia(78%) saturate(550%) hue-rotate(82deg) brightness(95%);
 }
 
 .player--centro {
@@ -717,4 +745,31 @@ h1, h2, h3, p {
 .barra--volume {
     width: 99px;
     margin: 0 -5px 0 -6px;
+}
+
+.aviso--acessivel {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.container--right [hidden] {
+    display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
 }

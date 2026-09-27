@@ -12,26 +12,26 @@
     <!-- Barra lateral esquerda -->
     <aside class="container--left">
         <nav class="menu--principal">
-            <a href="#" class="menu--item texto--branco">
+            <a href="#inicio" class="menu--item texto--branco" aria-current="page">
                 <span class="menu--icone"><img src="src/assets/icons/menu/home.svg" alt=""></span>
                 Home
             </a>
-            <a href="#" class="menu--item texto--cinza">
+            <a href="#" class="menu--item texto--cinza" data-nav="Search">
                 <span class="menu--icone"><img src="src/assets/icons/menu/search.svg" alt=""></span>
                 Search
             </a>
-            <a href="#" class="menu--item texto--cinza">
+            <a href="#biblioteca" class="menu--item texto--cinza">
                 <span class="menu--icone"><img src="src/assets/icons/menu/library.svg" alt=""></span>
                 Your Library
             </a>
         </nav>
 
         <nav class="menu--secundario">
-            <a href="#" class="menu--item texto--cinza">
+            <a href="#" class="menu--item texto--cinza" data-nav="Create Playlist">
                 <span class="menu--icone"><img src="src/assets/icons/menu/create.svg" alt=""></span>
                 Create Playlist
             </a>
-            <a href="#" class="menu--item texto--branco">
+            <a href="#" class="menu--item texto--branco" data-nav="Liked Songs">
                 <span class="menu--icone"><img src="src/assets/icons/menu/liked.svg" alt=""></span>
                 Liked Songs
             </a>
@@ -39,7 +39,7 @@
 
         <hr class="linha--separadora">
 
-        <ul class="menu--playlists">
+        <ul class="menu--playlists" id="biblioteca">
             <li><a href="#">Chill Mix</a></li>
             <li><a href="#">Insta Hits</a></li>
             <li><a href="#">Your Top Songs 2021</a></li>
@@ -55,7 +55,7 @@
             <li><a href="#">Mixed Feelings</a></li>
         </ul>
 
-        <div class="capa--tocando">
+        <div class="capa--tocando" id="capa-tocando">
             <img src="src/assets/img/covers/play-it-safe.jpg" alt="Capa do álbum Play It Safe">
             <span class="album--artista">JULIA WOLF</span>
             <span class="album--titulo">PLAY <small>IT</small> SAFE</span>
@@ -78,7 +78,7 @@
                 </button>
             </header>
 
-            <h1 class="saudacao">Good afternoon</h1>
+            <h1 class="saudacao" id="inicio">Good afternoon</h1>
 
             <div class="atalhos">
                 <a href="#" class="atalho"><div class="capa capa--mix" style="--cor: #F2DC3C"><img src="src/assets/img/covers/chill-mix.jpg" alt=""><span class="capa--logo"></span><span class="capa--nome">Chill Mix</span></div>Chill Mix</a>
@@ -174,7 +174,7 @@
         <div class="friend-activity--header">
             <span>Friend Activity</span>
             <button class="friend-activity--botao" aria-label="Adicionar amigos"><img src="src/assets/icons/amigos/add.svg" alt="" class="icone--add"></button>
-            <button class="friend-activity--botao" aria-label="Fechar"><img src="src/assets/icons/amigos/close.svg" alt="" class="icone--close"></button>
+            <button class="friend-activity--botao" aria-label="Recolher atividade de amigos" aria-expanded="true"><img src="src/assets/icons/amigos/close.svg" alt="" class="icone--close"></button>
         </div>
 
         <p class="friend-activity--texto">Let friends and followers on Spotify see what you&rsquo;re listening to.</p>
@@ -197,21 +197,21 @@
                 <span class="player--titulo">Play It Safe</span>
                 <span class="player--artista">Julia Wolf</span>
             </div>
-            <img src="src/assets/icons/player/heart.svg" alt="Curtida" class="player--curtir">
+            <button class="player--curtir" aria-label="Curtir Play It Safe, de Julia Wolf" aria-pressed="false"><img src="src/assets/icons/player/heart.svg" alt=""></button>
         </div>
 
         <div class="player--centro">
             <div class="player--controles">
-                <button aria-label="Aleatório"><img src="src/assets/icons/player/shuffle.svg" alt=""></button>
-                <button aria-label="Anterior"><img src="src/assets/icons/player/previous.svg" alt=""></button>
-                <button aria-label="Pausar" class="player--pausar"><img src="src/assets/icons/player/pause.svg" alt=""></button>
-                <button aria-label="Próxima"><img src="src/assets/icons/player/next.svg" alt=""></button>
-                <button aria-label="Repetir"><img src="src/assets/icons/player/repeat.svg" alt=""></button>
+                <button aria-label="Ativar reprodução aleatória" aria-pressed="false"><img src="src/assets/icons/player/shuffle.svg" alt=""></button>
+                <button aria-label="Faixa anterior"><img src="src/assets/icons/player/previous.svg" alt=""></button>
+                <button aria-label="Reproduzir" class="player--pausar" aria-pressed="false"><img src="src/assets/icons/player/play.svg" alt=""></button>
+                <button aria-label="Próxima faixa"><img src="src/assets/icons/player/next.svg" alt=""></button>
+                <button aria-label="Ativar repetição" aria-pressed="false"><img src="src/assets/icons/player/repeat.svg" alt=""></button>
             </div>
             <div class="player--progresso">
-                <span>2:39</span>
-                <div class="barra"><div class="barra--preenchida" style="width: 50%"></div></div>
-                <span>4:22</span>
+                <span class="player--tempo-atual">0:00</span>
+                <div class="barra" role="progressbar" aria-label="Progresso da faixa" aria-valuemin="0" aria-valuemax="262" aria-valuenow="0"><div class="barra--preenchida" style="width: 0%"></div></div>
+                <span class="player--duracao">4:22</span>
             </div>
         </div>
 
@@ -223,5 +223,7 @@
             <button aria-label="Tela cheia"><img src="src/assets/icons/player/fullscreen.svg" alt=""></button>
         </div>
     </footer>
+    <p class="aviso--acessivel" role="status" aria-live="polite" aria-atomic="true"></p>
+    <script src="src/assets/js/interacoes.js" defer></script>
 </body>
 </html>

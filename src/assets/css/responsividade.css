@@ -282,9 +282,9 @@
     }
 
     .player--progresso,
-    .player--controles button[aria-label="Aleatório"],
-    .player--controles button[aria-label="Anterior"],
-    .player--controles button[aria-label="Repetir"] {
+    .player--controles button:nth-child(1),
+    .player--controles button:nth-child(2),
+    .player--controles button:nth-child(5) {
         display: none;
     }
 
