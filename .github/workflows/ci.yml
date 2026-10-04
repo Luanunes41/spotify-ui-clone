@@ -10,6 +10,11 @@ on:
 permissions:
   contents: read
 
+# Cancela execuções antigas do mesmo branch quando chega um push novo
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   validar-javascript:
     name: Validar JavaScript
@@ -23,5 +28,35 @@ jobs:
         with:
           node-version: 24
 
-      - name: Verificar sintaxe do JavaScript
-        run: node --check src/assets/js/interacoes.js
+      - name: Verificar sintaxe de todos os .js
+        run: find src -name '*.js' -print -exec node --check {} \;
+
+  validar-html:
+    name: Validar HTML e acessibilidade
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar o código
+        uses: actions/checkout@v7
+
+      - name: Preparar Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+
+      - name: Rodar html-validate (regras em .htmlvalidate.json)
+        run: npx --yes html-validate@9 index.html
+
+  verificar-arquivos:
+    name: Verificar imagens, ícones e fontes
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar o código
+        uses: actions/checkout@v7
+
+      - name: Preparar Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+
+      - name: Conferir referências do HTML e do CSS
+        run: node .github/scripts/verificar-arquivos.mjs

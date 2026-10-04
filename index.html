@@ -10,8 +10,8 @@
 <body>
 
     <!-- Barra lateral esquerda -->
-    <aside class="container--left">
-        <nav class="menu--principal">
+    <aside class="container--left" aria-label="Menu e biblioteca">
+        <nav class="menu--principal" aria-label="Navegação principal">
             <a href="#inicio" class="menu--item texto--branco" aria-current="page">
                 <span class="menu--icone"><img src="src/assets/icons/menu/home.svg" alt=""></span>
                 Home
@@ -26,7 +26,7 @@
             </a>
         </nav>
 
-        <nav class="menu--secundario">
+        <nav class="menu--secundario" aria-label="Atalhos da biblioteca">
             <a href="#" class="menu--item texto--cinza" data-nav="Create Playlist">
                 <span class="menu--icone"><img src="src/assets/icons/menu/create.svg" alt=""></span>
                 Create Playlist
@@ -59,7 +59,7 @@
             <img src="src/assets/img/covers/play-it-safe.jpg" alt="Capa do álbum Play It Safe">
             <span class="album--artista">JULIA WOLF</span>
             <span class="album--titulo">PLAY <small>IT</small> SAFE</span>
-            <button class="album--recolher" aria-label="Recolher capa"><img src="src/assets/icons/navegacao/chevron-down.svg" alt=""></button>
+            <button type="button" class="album--recolher" aria-label="Recolher capa"><img src="src/assets/icons/navegacao/chevron-down.svg" alt=""></button>
         </div>
     </aside>
 
@@ -68,10 +68,10 @@
         <div class="conteudo">
             <header class="topo">
                 <div class="topo--navegacao">
-                    <button class="botao--circular" aria-label="Voltar"><img src="src/assets/icons/navegacao/chevron-left.svg" alt=""></button>
-                    <button class="botao--circular" aria-label="Avançar"><img src="src/assets/icons/navegacao/chevron-right.svg" alt=""></button>
+                    <button type="button" class="botao--circular" aria-label="Voltar"><img src="src/assets/icons/navegacao/chevron-left.svg" alt=""></button>
+                    <button type="button" class="botao--circular" aria-label="Avançar"><img src="src/assets/icons/navegacao/chevron-right.svg" alt=""></button>
                 </div>
-                <button class="usuario">
+                <button type="button" class="usuario">
                     <img src="src/assets/img/covers/avatar.jpg" alt="" class="usuario--avatar">
                     <span>davedirect3</span>
                     <img src="src/assets/icons/navegacao/caret-down.svg" alt="" class="usuario--seta">
@@ -170,11 +170,11 @@
     </main>
 
     <!-- Barra lateral direita -->
-    <aside class="container--right">
+    <aside class="container--right" aria-label="Atividade dos amigos">
         <div class="friend-activity--header">
             <span>Friend Activity</span>
-            <button class="friend-activity--botao" aria-label="Adicionar amigos"><img src="src/assets/icons/amigos/add.svg" alt="" class="icone--add"></button>
-            <button class="friend-activity--botao" aria-label="Recolher atividade de amigos" aria-expanded="true"><img src="src/assets/icons/amigos/close.svg" alt="" class="icone--close"></button>
+            <button type="button" class="friend-activity--botao" aria-label="Adicionar amigos"><img src="src/assets/icons/amigos/add.svg" alt="" class="icone--add"></button>
+            <button type="button" class="friend-activity--botao" aria-label="Recolher atividade de amigos" aria-expanded="true"><img src="src/assets/icons/amigos/close.svg" alt="" class="icone--close"></button>
         </div>
 
         <p class="friend-activity--texto">Let friends and followers on Spotify see what you&rsquo;re listening to.</p>
@@ -187,7 +187,7 @@
 
         <p class="friend-activity--texto friend-activity--instrucao">Go to Settings &gt; Social and enable &ldquo;Share my listening activity on Spotify.&rsquo; You can turn this off at any time.</p>
 
-        <button class="botao--settings">SETTINGS</button>
+        <button type="button" class="botao--settings">SETTINGS</button>
     </aside>
 
     <!-- Player -->
@@ -197,16 +197,16 @@
                 <span class="player--titulo">Play It Safe</span>
                 <span class="player--artista">Julia Wolf</span>
             </div>
-            <button class="player--curtir" aria-label="Curtir Play It Safe, de Julia Wolf" aria-pressed="false"><img src="src/assets/icons/player/heart.svg" alt=""></button>
+            <button type="button" class="player--curtir" aria-label="Curtir Play It Safe, de Julia Wolf" aria-pressed="false"><img src="src/assets/icons/player/heart.svg" alt=""></button>
         </div>
 
         <div class="player--centro">
             <div class="player--controles">
-                <button aria-label="Ativar reprodução aleatória" aria-pressed="false"><img src="src/assets/icons/player/shuffle.svg" alt=""></button>
-                <button aria-label="Faixa anterior"><img src="src/assets/icons/player/previous.svg" alt=""></button>
-                <button aria-label="Reproduzir" class="player--pausar" aria-pressed="false"><img src="src/assets/icons/player/play.svg" alt=""></button>
-                <button aria-label="Próxima faixa"><img src="src/assets/icons/player/next.svg" alt=""></button>
-                <button aria-label="Ativar repetição" aria-pressed="false"><img src="src/assets/icons/player/repeat.svg" alt=""></button>
+                <button type="button" aria-label="Ativar reprodução aleatória" aria-pressed="false"><img src="src/assets/icons/player/shuffle.svg" alt=""></button>
+                <button type="button" aria-label="Faixa anterior"><img src="src/assets/icons/player/previous.svg" alt=""></button>
+                <button type="button" aria-label="Reproduzir" class="player--pausar" aria-pressed="false"><img src="src/assets/icons/player/play.svg" alt=""></button>
+                <button type="button" aria-label="Próxima faixa"><img src="src/assets/icons/player/next.svg" alt=""></button>
+                <button type="button" aria-label="Ativar repetição" aria-pressed="false"><img src="src/assets/icons/player/repeat.svg" alt=""></button>
             </div>
             <div class="player--progresso">
                 <span class="player--tempo-atual">0:00</span>
@@ -216,11 +216,11 @@
         </div>
 
         <div class="player--extras">
-            <button aria-label="Fila"><img src="src/assets/icons/player/queue.svg" alt=""></button>
-            <button aria-label="Dispositivos"><img src="src/assets/icons/player/devices.svg" alt=""></button>
-            <button aria-label="Volume"><img src="src/assets/icons/player/volume.svg" alt=""></button>
+            <button type="button" aria-label="Fila"><img src="src/assets/icons/player/queue.svg" alt=""></button>
+            <button type="button" aria-label="Dispositivos"><img src="src/assets/icons/player/devices.svg" alt=""></button>
+            <button type="button" aria-label="Volume"><img src="src/assets/icons/player/volume.svg" alt=""></button>
             <div class="barra barra--volume"><div class="barra--preenchida" style="width: 90%"></div></div>
-            <button aria-label="Tela cheia"><img src="src/assets/icons/player/fullscreen.svg" alt=""></button>
+            <button type="button" aria-label="Tela cheia"><img src="src/assets/icons/player/fullscreen.svg" alt=""></button>
         </div>
     </footer>
     <p class="aviso--acessivel" role="status" aria-live="polite" aria-atomic="true"></p>
